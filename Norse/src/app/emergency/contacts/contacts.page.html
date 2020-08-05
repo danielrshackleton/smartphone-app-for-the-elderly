@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ number }}</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="emergency"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h3>{{ details }}</h3>
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button color="success" (click)="callNum()">
+            <ion-icon name="call"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

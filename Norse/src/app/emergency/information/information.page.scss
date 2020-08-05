@@ -1,0 +1,49 @@
+.background {
+    --ion-background-color: #fffef9;
+}
+
+ion-content {
+    white-space: pre-wrap;
+}
+
+
+@media screen and (min-height : 950px) {
+
+    ion-title {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    ion-back-button {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+
+    h3 {
+        font-weight: bold;
+        font-size: 26px;
+        margin: 5%;
+    }
+}
+
+@media screen and (min-height : 300px) and (max-height : 950px){
+
+    ion-title {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    ion-back-button {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}

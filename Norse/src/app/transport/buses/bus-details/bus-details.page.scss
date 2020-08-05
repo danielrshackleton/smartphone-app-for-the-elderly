@@ -1,0 +1,81 @@
+.background {
+    --ion-background-color: #fffef9;
+}
+
+@media screen and (min-height : 950px) {
+
+    ion-title {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    ion-back-button {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+
+    .busList {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: 6%;
+
+        ion-list-header {
+            font-size: 28px;
+            padding-bottom: 6%;
+        }
+
+        ion-item {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    h4 {
+        text-align: center;
+        margin-top: 20%;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+}
+
+@media screen and (min-height : 300px) and (max-height: 950px) {
+
+    ion-back-button {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    ion-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .busList {
+        padding-top: 4%;
+        padding-left: 6%;
+        padding-right: 6%;
+
+        ion-list-header {
+            font-size: 22px;
+        }
+
+        ion-item {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    }
+
+    h4 {
+        text-align: center;
+        margin-top: 40%;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+}

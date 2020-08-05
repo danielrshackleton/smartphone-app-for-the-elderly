@@ -1,0 +1,25 @@
+<ion-content>
+    <ion-header no-border *ngIf="!noCurrentUser">
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="home"></ion-back-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+    <h1>Welcome</h1>
+
+    <div class="info">
+        <ion-item>
+            <ion-icon name="contact"></ion-icon>
+          <!-- <ion-label stacked>Enter name here:</ion-label> -->
+          <ion-input [(ngModel)]="userInput" clearInput type="text" placeholder="Enter name here"></ion-input>
+        </ion-item>
+
+        <ion-button  class="continueButton" centered center shape="round" fill="outline" (click)="goChoicesPage()" [disabled]="!userInput">
+            Continue
+        </ion-button>
+        
+    </div>
+
+
+</ion-content>

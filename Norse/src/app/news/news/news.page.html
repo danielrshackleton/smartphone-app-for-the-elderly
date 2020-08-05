@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar class="myHeader">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>News</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <ion-card *ngFor="let news of newsArray">
+        <!-- To open full article insert (click)="getDetails(news)" -->
+        <img src="{{news.urlToImage}}">
+        <ion-card-header>
+            <ion-card-subtitle>{{news.publishedAt | date}}</ion-card-subtitle>
+
+            <ion-card-title>{{news.title}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            {{news.description}}
+        </ion-card-content>
+    </ion-card>
+
+    <!--
+    <ion-grid>
+    <ion-row>
+    <ion-col>
+    <div *ngFor="let news of newsArray">
+    <div class="movie-card" [ngStyle]="{'background-image': 'url(' + news.urlToImage + ')'}" (click)="getDetails(news)">
+    <ion-card>
+    <ion-card-header>
+    <ion-card-title>{{news.title}}</ion-card-title>
+</ion-card-header>
+<ion-card-content>{{news.description}}
+</ion-card-content>
+</ion-card>
+</div>
+</div>
+</ion-col>
+</ion-row>
+</ion-grid> -->
+
+</ion-content>

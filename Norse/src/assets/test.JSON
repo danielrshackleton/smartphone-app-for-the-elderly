@@ -1,0 +1,104 @@
+{
+    "atcocode": "2900N12278",
+    "smscode": "NFODJGJW",
+    "request_time": "2019-04-18T12:40:09+01:00",
+    "name": "Pettus Road",
+    "stop_name": "Pettus Road",
+    "bearing": "W",
+    "indicator": "adj",
+    "locality": "Eaton Park, Norwich",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            1.25588,
+            52.61814
+        ]
+    },
+    "departures": {
+        "25": [
+            {
+                "mode": "bus",
+                "line": "25",
+                "line_name": "25",
+                "direction": "University,Chancellors Drive Stop F",
+                "operator": "FECS",
+                "date": "2019-04-18",
+                "expected_departure_date": "2019-04-18",
+                "aimed_departure_time": "12:40",
+                "expected_departure_time": "12:50",
+                "best_departure_estimate": "12:50",
+                "source": "NextBuses",
+                "dir": "outbound",
+                "id": "https://transportapi.com/v3/uk/bus/route/FECS/25/outbound/2900N12278/2019-04-18/12:40/timetable.json?app_id=300897bd&app_key=20e5f60f9386eb631b529081dec189bd",
+                "operator_name": "First in Norfolk & Suffolk"
+            },
+            {
+                "mode": "bus",
+                "line": "25",
+                "line_name": "25",
+                "direction": "University,Chancellors Drive Stop F",
+                "operator": "FECS",
+                "date": "2019-04-18",
+                "expected_departure_date": "2019-04-18",
+                "aimed_departure_time": "12:50",
+                "expected_departure_time": "13:00",
+                "best_departure_estimate": "13:00",
+                "source": "NextBuses",
+                "dir": "outbound",
+                "id": "https://transportapi.com/v3/uk/bus/route/FECS/25/outbound/2900N12278/2019-04-18/12:50/timetable.json?app_id=300897bd&app_key=20e5f60f9386eb631b529081dec189bd",
+                "operator_name": "First in Norfolk & Suffolk"
+            }
+        ],
+        "50": [
+            {
+                "mode": "bus",
+                "line": "50",
+                "line_name": "50",
+                "direction": "Norwich, Mousehold Street",
+                "operator": "KCTB",
+                "date": "2019-04-18",
+                "expected_departure_date": null,
+                "aimed_departure_time": "12:46",
+                "expected_departure_time": null,
+                "best_departure_estimate": "12:46",
+                "source": "NextBuses",
+                "dir": "outbound",
+                "id": "https://transportapi.com/v3/uk/bus/route/KCTB/50/outbound/2900N12278/2019-04-18/12:46/timetable.json?app_id=300897bd&app_key=20e5f60f9386eb631b529081dec189bd",
+                "operator_name": "Konectbus"
+            },
+            {
+                "mode": "bus",
+                "line": "50",
+                "line_name": "50",
+                "direction": "Norwich, Mousehold Street",
+                "operator": "KCTB",
+                "date": "2019-04-18",
+                "expected_departure_date": null,
+                "aimed_departure_time": "13:46",
+                "expected_departure_time": null,
+                "best_departure_estimate": "13:46",
+                "source": "NextBuses",
+                "dir": "outbound",
+                "id": "https://transportapi.com/v3/uk/bus/route/KCTB/50/outbound/2900N12278/2019-04-18/13:46/timetable.json?app_id=300897bd&app_key=20e5f60f9386eb631b529081dec189bd",
+                "operator_name": "Konectbus"
+            },
+            {
+                "mode": "bus",
+                "line": "50",
+                "line_name": "50",
+                "direction": "Norwich, Mousehold Street",
+                "operator": "KCTB",
+                "date": "2019-04-18",
+                "expected_departure_date": null,
+                "aimed_departure_time": "14:46",
+                "expected_departure_time": null,
+                "best_departure_estimate": "14:46",
+                "source": "NextBuses",
+                "dir": "outbound",
+                "id": "https://transportapi.com/v3/uk/bus/route/KCTB/50/outbound/2900N12278/2019-04-18/14:46/timetable.json?app_id=300897bd&app_key=20e5f60f9386eb631b529081dec189bd",
+                "operator_name": "Konectbus"
+            }
+        ]
+    },
+    "source": "NextBuses (cached)"
+}

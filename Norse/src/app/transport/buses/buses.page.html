@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Local Buses</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list class="busList">
+        <ion-list-header>
+            Bus stops near me
+        </ion-list-header>
+
+        <ion-item *ngFor="let bus of buses" (click)="getBusDetails(bus)" detail="true" button="true">
+            {{ bus.name }}, {{ bus.distance }}m
+        </ion-item>
+
+
+    </ion-list>
+
+
+
+</ion-content>

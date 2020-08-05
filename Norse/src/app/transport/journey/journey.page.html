@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Journey Planner</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div class="searchForm">
+        <ion-item>
+            <ion-label>From:</ion-label>
+            <ion-input autocomplete="on" autocorrect="on" size-md="8" clearInput [(ngModel)]="startInput" [disabled]="isCurrentLocation" placeholder="Enter start location"></ion-input>
+            <ion-icon color="primary" name="close-circle-outline" slot="end" shape="round" fill="outline" (click)="clearFirstInput()" *ngIf="isCurrentLocation"></ion-icon>
+        </ion-item>
+
+        <ion-button class="currentPositionButton" shape="round" fill="outline" (click)="fromCurrent()" *ngIf="!isCurrentLocation" [disabled]="isCurrentLocation">
+            <ion-label>
+                or use current position
+            </ion-label>
+        </ion-button>
+
+
+        <ion-item class="toInput">
+            <ion-label>To:</ion-label>
+            <ion-input clearInput [(ngModel)]="endInput" placeholder="Enter destination"></ion-input>
+        </ion-item>
+    </div>
+
+
+    <div class="dateTime">
+        <ion-item >
+            <ion-label>Departure day: </ion-label>
+            <ion-select [interfaceOptions]="customAlertOptions" interface="popover" placeholder="today" [(ngModel)]="value" (ionChange)="departureSelect(value)">
+                <ion-select-option value="today">Today</ion-select-option>
+                <ion-select-option value="tomorrow">Tomorrow</ion-select-option>
+                <ion-select-option value="twodays">{{twoDays | date:'EEE dd'}} (2 days)</ion-select-option>
+                <ion-select-option value="threedays">{{threeDays | date:'EEE dd'}} (3 days)</ion-select-option>
+                <ion-select-option value="fourdays">{{fourDays | date:'EEE dd'}} (4 days)</ion-select-option>
+                <ion-select-option value="fivedays">{{fiveDays | date:'EEE dd'}} (5 days)</ion-select-option>
+                <ion-select-option value="sixdays">{{sixDays | date:'EEE dd'}} (6 days)</ion-select-option>
+                <ion-select-option value="sevendays">{{sevenDays | date:'EEE dd'}} (7 days)</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Departure time</ion-label>
+            <ion-datetime display-format="HH:mm" [(ngModel)]="departureTime"></ion-datetime>
+        </ion-item>
+    </div>
+
+
+    <ion-button centered center class="searchButton" shape="round" fill="outline" (click)="search()" [disabled]="!startInput || !endInput">
+        Search
+    </ion-button>
+
+
+
+
+
+</ion-content>

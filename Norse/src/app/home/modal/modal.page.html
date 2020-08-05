@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Choose Apps</ion-title>
+        <ion-button shape="round" fill="outline" slot="end" class="closeButton" (click)="close()">close</ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+    <ion-list class="choices">
+        <ion-item *ngFor="let choice of data">
+            <ion-thumbnail slot="start">
+      <ion-img src="{{choice.imgSrc}}"></ion-img>
+    </ion-thumbnail>
+            <ion-label>{{choice.val}}</ion-label>
+            <ion-toggle slot="end" [(ngModel)]="choice.isChecked"></ion-toggle>
+        </ion-item>
+
+        <ion-button class="saveButton" text-center color="primary" (click)="saveChoices()">Save Choices</ion-button>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,193 @@
+.spinner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.background {
+    --ion-background-color: #fffef9;
+}
+
+@media screen and (min-height : 950px) {
+
+    ion-back-button {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .departureTime {
+        font-size: 29px;
+        font-weight: bold;
+    }
+
+    .journeyInfo {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        h2 {
+            font-weight: bold;
+            font-size: 30px;
+
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 25px;
+        }
+    }
+
+    .journeyList {
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 3%;
+        padding-bottom: 0%;
+    }
+
+    .fromPoint {
+        padding-top: 20px;
+        padding-right: 10%;
+
+        ion-icon {
+            padding-right: 5%;
+            font-size: 45px;
+        }
+
+        h4 {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        ion-label {
+            font-weight: bold;
+            font-size: 18;
+        }
+    }
+
+    .toPoint {
+        margin-bottom: 20px;
+
+        h4 {
+            font-size: 21px;
+            font-weight: bold;
+        }
+    }
+
+    .individualDuration {
+        ion-icon {
+            font-size: 45px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    }
+
+    .arrivalTime {
+        h4 {
+            font-size: 23px;
+            font-weight: bold;
+        }
+    }
+
+    .journeyDuration {
+        ion-title {
+            font-size: 23px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+@media screen and (min-height : 300px) and (max-height: 950px){
+    ion-back-button {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .departureTime {
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .journeyInfo {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        h2 {
+            font-weight: bold;
+            font-size: 22px;
+
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 19px;
+        }
+    }
+
+    .journeyList {
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 3%;
+        padding-bottom: 0%;
+    }
+
+    .fromPoint {
+        padding-top: 20px;
+        padding-right: 10%;
+
+        ion-icon {
+            padding-right: 5%;
+            font-size: 45px;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        ion-label {
+            font-weight: bold;
+            font-size: 18;
+        }
+    }
+
+    .toPoint {
+        margin-bottom: 20px;
+
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .individualDuration {
+        ion-icon {
+            font-size: 45px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    }
+
+    .arrivalTime {
+        h4 {
+            font-size: 21px;
+            font-weight: bold;
+        }
+    }
+
+    .journeyDuration {
+        ion-title {
+            font-size: 21px;
+            font-weight: bold;
+        }
+    }
+}

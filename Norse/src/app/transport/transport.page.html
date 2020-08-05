@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Transport</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false" (click)="openMenu"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label position="stacked">From</ion-label>
+        <ion-input clearInput [(ngModel)]="startInput" [disabled]="inputDisabled"></ion-input>
+    </ion-item>
+
+    <ion-button shape="round" fill="outline" (click)="fromCurrent()">
+        or use current position
+        <ion-icon name="pin" slot="end"></ion-icon>
+    </ion-button>
+
+
+    <ion-item>
+        <ion-label position="stacked">To</ion-label>
+        <ion-input clearInput [(ngModel)]="endInput"></ion-input>
+    </ion-item>
+    <ion-button shape="round" fill="outline" (click)="search()" [disabled]="!startInput || !endInput">
+        Search
+    </ion-button>
+
+</ion-content>

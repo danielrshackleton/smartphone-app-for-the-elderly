@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="transport-tabs/journey"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <div *ngIf="!journeyArray" class="spinner">
+        <ion-spinner></ion-spinner>
+        Please wait...
+    </div>
+    <div *ngIf="journeyArray" class="journeyList">
+        <ion-list>
+            <ion-item lines="none">
+                <ion-text class="journeyInfo">
+                    <h2>{{startName}} to {{endName}}</h2> <br />
+                    <h3>Departing after {{departureTime}}, {{departureDay | date:'EEE dd'}}</h3>
+                </ion-text>
+            </ion-item>
+            <div *ngFor="let item of journeyArray.routes[0].route_parts">
+
+
+                <ion-item lines="none" class="fromPoint">
+
+                    <ion-text>
+                        <h4>{{item.from_point_name}}</h4>
+
+                        <ion-label *ngIf="item.mode == 'bus'"> (line {{item.line_name}})</ion-label>
+                    </ion-text>
+
+                    <ion-text slot="end" >
+                        <h4 class="departureTime">{{item.departure_time}}</h4>
+                    </ion-text>
+
+                </ion-item>
+                <ion-item lines="none" class="individualDuration">
+
+                    <ion-icon color="tertiary" *ngIf="item.mode === 'bus'" name="bus"></ion-icon>
+                    <ion-icon color="tertiary" *ngIf="item.mode === 'train' " name="train"></ion-icon>
+                    <ion-icon color="tertiary" *ngIf="item.mode === 'foot'" name="walk"></ion-icon>
+                    <ion-icon color="tertiary" *ngIf="item.mode === 'tube' || item.mode === 'overground'" name="subway"></ion-icon>
+
+                    <ion-icon name="arrow-round-down"></ion-icon>
+                    <h4>Duration: {{item.duration.substring(0,5)}}</h4>
+
+
+
+                    <ion-text slot="end">
+
+                    </ion-text>
+                </ion-item>
+                <ion-item>
+
+                    <ion-text class="toPoint">
+                        <h4>{{item.to_point_name}}</h4>
+                    </ion-text>
+                </ion-item>
+            </div>
+
+
+            <ion-item>
+                <ion-text slot="end" class="arrivalTime">
+                    <h4>Arrival Time: {{journeyArray.routes[0].arrival_time}}</h4>
+                </ion-text>
+            </ion-item>
+        </ion-list>
+
+    </div>
+</ion-content>
+
+
+<ion-footer *ngIf="journeyArray">
+    <ion-toolbar mode="md" class="journeyDuration">
+        <ion-title slot="primary" color="tertiary">journey duration: {{journeyArray.routes[0].duration.substring(0,5)}}</ion-title>
+    </ion-toolbar>
+</ion-footer>

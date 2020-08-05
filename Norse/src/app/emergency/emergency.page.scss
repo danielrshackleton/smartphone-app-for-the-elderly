@@ -1,0 +1,72 @@
+.background {
+    --ion-background-color: #fffef9;
+}
+
+@media screen and (min-height : 900px) {
+
+    ion-title {
+        font-weight: bold;
+        font-size: 26px;
+    }
+
+    ion-back-button {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    ion-item {
+
+        margin: 10px;
+
+        ion-label {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+
+    ion-item-divider {
+
+        padding: 15px;
+        margin-top: 20px;
+
+        ion-label {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-height : 300px) and (max-height : 900px){
+
+    ion-title {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    ion-back-button {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    ion-item {
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        ion-label {
+            font-size: 19px;
+            font-weight: bold;
+        }
+    }
+
+
+    ion-item-divider {
+
+        padding: 5px;
+        margin-top: 10px;
+
+        ion-label {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+}

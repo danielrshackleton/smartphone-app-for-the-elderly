@@ -1,0 +1,74 @@
+{
+"request_time": "2019-04-23T13:18:00+01:00",
+"source": "Traveline southeast journey planning API",
+"acknowledgements": "Traveline southeast",
+"routes": [
+{
+"duration": "02:48:00",
+"route_parts": [
+{
+"mode": "foot",
+"from_point_name": "specified point, Norwich",
+"to_point_name": "Norwich Rail Station",
+"destination": "",
+"line_name": "",
+"duration": "00:04:00",
+"departure_time": "13:26",
+"arrival_time": "13:30"
+},
+{
+"mode": "train",
+"from_point_name": "Norwich",
+"to_point_name": "London Liverpool Street",
+"destination": "London Liverpool Street",
+"line_name": "29004",
+"duration": "01:49:00",
+"departure_time": "13:30",
+"arrival_time": "15:19"
+},
+{
+"mode": "bus",
+"from_point_name": "Liverpool Street Station",
+"to_point_name": "London Bridge Borough High St",
+"destination": "Clapham Junction",
+"line_name": "35",
+"duration": "00:20:00",
+"departure_time": "15:28",
+"arrival_time": "15:48"
+},
+{
+"mode": "foot",
+"from_point_name": "London Bridge Borough High St",
+"to_point_name": "London Bridge Station",
+"destination": "",
+"line_name": "",
+"duration": "00:09:00",
+"departure_time": "15:48",
+"arrival_time": "15:57"
+},
+{
+"mode": "train",
+"from_point_name": "London Bridge",
+"to_point_name": "Lee",
+"destination": "Dartford",
+"line_name": "3341",
+"duration": "00:12:00",
+"departure_time": "15:57",
+"arrival_time": "16:09"
+},
+{
+"mode": "foot",
+"from_point_name": "Lee",
+"to_point_name": "Station Approach, Lee (London)",
+"destination": "",
+"line_name": "",
+"duration": "00:05:00",
+"departure_time": "16:09",
+"arrival_time": "16:14"
+}
+],
+"departure_time": "13:26",
+"arrival_time": "16:14"
+}
+]
+}

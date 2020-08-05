@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{name}}</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="transport-tabs/buses"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div *ngIf="!busArray || busArray.departures.length === 0">
+        <h4>Sorry, no local buses detected</h4>
+    </div>
+
+    <div *ngIf="busArray">
+        <ion-list *ngFor="let bus of busArray.departures | keyvalue" class="busList">
+            <ion-list-header>
+                <ion-label>bus line: {{ bus.key }}</ion-label>
+            </ion-list-header>
+
+            <ion-item *ngFor="let data of bus.value">
+                {{ data.best_departure_estimate }} to {{ data.direction }}
+            </ion-item>
+        </ion-list>
+    </div>
+
+</ion-content>

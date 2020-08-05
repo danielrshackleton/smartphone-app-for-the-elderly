@@ -1,0 +1,40 @@
+<ion-content padding class="background">
+    <ion-item text-center lines="none">
+        <ion-label class="welcome">
+            Welcome, {{currentUser}}!
+        </ion-label>
+    </ion-item>
+    <ion-grid>
+        <ion-row text-center>
+            <ng-container *ngFor="let choice of choices">
+                <ion-col size="6" size-sm="6" size-md="4" size-lg="4" *ngIf=" choice.isChecked == true && choice.route">
+                    <ion-button fill="clear" >
+                        <img src="{{choice.imgSrc}}" [routerLink]="[choice.route]">
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6" size-sm="6" size-md="4" size-lg="4" *ngIf=" choice.isChecked == true && choice.isFacebook">
+                    <ion-button fill="clear" (click)="openFacebook()">
+                        <img src="{{choice.imgSrc}}">
+                    </ion-button>
+                </ion-col>
+            </ng-container>
+            <ion-col size="6" size-sm="6" size-md="4" size-lg="4" class="addNewApp">
+                <ion-button fill="clear" (click)="openModal(choices)">
+                    <img src="assets/addPage.png">
+                </ion-button>
+                <ion-label>Add new app</ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+    <ion-item class="changeUser">
+        <ion-label>Change or add new user</ion-label>
+        <ion-select [interfaceOptions]="customAlertOptions" [placeholder]=currentUser interface="popover" [(ngModel)]="value" (ionChange)="changeSettings(value)">
+            <ion-select-option *ngFor="let option of userOptions" [selected]="option == currentUser" value={{option}} lines="none">{{option}}</ion-select-option>
+            <ion-select-option disabled lines="none">──────────</ion-select-option>
+            <ion-select-option value='new' lines="none">Add new user</ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-content>

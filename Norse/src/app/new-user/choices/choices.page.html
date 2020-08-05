@@ -1,0 +1,30 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Choose your preferred apps</h1>
+    <h2>This can be changed later</h2>
+
+    <ion-list class="choices">
+        <ion-item *ngFor="let choice of choices">
+
+                <ion-thumbnail slot="start">
+                    <ion-img src="{{choice.imgSrc}}"></ion-img>
+                </ion-thumbnail>
+
+                <ion-label>{{choice.val}}</ion-label>
+                <ion-toggle slot="end" [(ngModel)]="choice.isChecked"></ion-toggle>
+            </ion-item>
+    </ion-list>
+
+
+
+    <ion-button shape="round" fill="outline" (click)="save()" [disabled]="!userInput">
+        Save choices
+    </ion-button>
+</ion-content>
